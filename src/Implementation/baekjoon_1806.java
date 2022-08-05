@@ -16,17 +16,17 @@ public class baekjoon_1806 {
 		for(int i = 2 ; i < n+1 ; i++) {
 			s_arr[i] = s_arr[i-1] + Integer.parseInt(st.nextToken());
 		}
-		
+
 		int first = 1;
 		int second = 0;
 		int result = Integer.MAX_VALUE;
 		int temp = 0;
-		while(first < n && second < n) {
+		while(first > second && first <= n && second <= n) {
 			temp = s_arr[first] - s_arr[second];
-			result = Math.min(result, first-second+1);
-			if(temp > s) second += 1;
-			if(temp <= s) first += 1;
+			if(temp > s) {result = Math.min(result, first-second); second += 1;} 
+			if(temp < s) first += 1;
+			if(temp == s) {result = Math.min(result, first-second); first += 1;}
 		}
-		System.out.println(result);
+		System.out.println(result == Integer.MAX_VALUE? 0 : result);
 	}
 }

@@ -1,9 +1,9 @@
-package Implementation;
+package algo_test;
 
 import java.io.*;
-import java.util.*;
-public class baekjoon_11021 {
+import java.util.StringTokenizer;
 
+public class baekjoon_11021 {
 
 	public static void main(String[] args) throws Exception{
 		BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
@@ -17,6 +17,7 @@ public class baekjoon_11021 {
 			sb.append("Case").append(" #").append(i+1).append(": ").append(a+b).append("\n");
 		}
 		System.out.println(sb);
+		
 	}
-	
+
 }
