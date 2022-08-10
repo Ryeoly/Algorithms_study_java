@@ -1,8 +1,46 @@
+<<<<<<< HEAD
+package Implementation;
+=======
 package algo_test;
+>>>>>>> 34570197d90576127ea0726663e577d78bdb99bb
 import java.util.*;
 import java.io.*;
 public class baekjoon_17298 {
 
+<<<<<<< HEAD
+	public static void main(String[] args) throws Exception{
+		BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
+		int n = Integer.parseInt(br.readLine());
+		
+		int[] arr = new int[n];
+		StringTokenizer st = new StringTokenizer(br.readLine());
+		for(int i = 0 ; i< n ; i++) {
+			arr[i] = Integer.parseInt(st.nextToken());
+		}
+		
+		StringBuilder sb = new StringBuilder();
+		int[] result = new int[n];
+		int pre = arr[0];
+		int cnt = 1;
+		for(int i = 1 ; i < n; i++) {
+			if(arr[i] > pre) {
+				for(int j = 0 ; j < cnt ; j++) {
+					sb.append(arr[i]).append(" ");
+				}
+				pre = arr[i];
+				cnt = 1;
+			}else {
+				cnt += 1;
+			}
+		}
+		for(int j = 0 ; j < cnt ; j++) {
+			sb.append(-1).append(" ");
+		}
+		System.out.println(sb);
+		
+	}
+
+=======
 	public static void main(String[] args) throws Exception {
 		BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
 		int n = Integer.parseInt(br.readLine());
@@ -41,4 +79,5 @@ public class baekjoon_17298 {
 		}
 		System.out.println(sb);
 	}
+>>>>>>> 34570197d90576127ea0726663e577d78bdb99bb
 }
